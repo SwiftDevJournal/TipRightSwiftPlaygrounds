@@ -10,6 +10,7 @@ struct ContentView: View {
         formatter.numberStyle = .currency
         return formatter
     }()
+    let tipRange = 0...1000
     
     var body: some View {
         VStack {
@@ -21,7 +22,7 @@ struct ContentView: View {
                 Text("Tip Percentage:")
                 TextField("Tip Percentage", value: $tipPercentage, formatter: NumberFormatter())
                 // Increment or decrement by 5 percent.
-                Stepper("Tip Percentage", value: $tipPercentage, step: 5)
+                Stepper("Tip Percentage", value: $tipPercentage, in: tipRange, step: 5)
             }
             Text("Tip Amount: \(tipAmount)")
             Button("Calculate Tip") {
