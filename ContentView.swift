@@ -31,6 +31,12 @@ struct ContentView: View {
                 calculateTip()
             }
         }
+        .onChange(of: billAmount) { _ in
+            calculateTip()
+        }
+        .onChange(of: tipPercentage) { _ in
+            calculateTip()
+        }
     }
     
     func calculateTip() {
