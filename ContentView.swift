@@ -24,7 +24,7 @@ struct ContentView: View {
                 TextField("Tip Percentage", value: $tipPercentage, formatter: NumberFormatter())
                     .keyboardType(.decimalPad)
                 // Increment or decrement by 5 percent.
-                Stepper("Tip Percentage", value: $tipPercentage, in: tipRange, step: 5)
+                Stepper("", value: $tipPercentage, in: tipRange, step: 5)
             }
             Text("Tip Amount: \(tipAmount)")
             Button("Calculate Tip") {
