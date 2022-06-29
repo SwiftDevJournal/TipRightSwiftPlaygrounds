@@ -17,10 +17,12 @@ struct ContentView: View {
             HStack {
                 Text("Bill Amount:")
                 TextField("Bill Amount", value: $billAmount, formatter: currencyFormatter)
+                    .keyboardType(.decimalPad)
             }
             HStack {
                 Text("Tip Percentage:")
                 TextField("Tip Percentage", value: $tipPercentage, formatter: NumberFormatter())
+                    .keyboardType(.decimalPad)
                 // Increment or decrement by 5 percent.
                 Stepper("Tip Percentage", value: $tipPercentage, in: tipRange, step: 5)
             }
