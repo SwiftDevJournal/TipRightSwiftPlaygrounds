@@ -14,6 +14,9 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
+            Text("Calculate Tip")
+                .font(.title)
+                .padding(.vertical)
             HStack {
                 Spacer()
                 Text("Bill Amount:")
